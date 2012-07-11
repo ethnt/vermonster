@@ -4,7 +4,7 @@ Vermonster is a way to consume the [Cheddar API](https://cheddarapp.com/develope
 
 # Objective
 
-_Obviously this isn't implemented this. But eventually..._
+_Obviously this isn't implemented yet. But eventually..._
 
     cheddar = Vermonster::Client.new(:id => "oauth-id", :secret => "oauth-secret")
 
@@ -20,6 +20,9 @@ _Obviously this isn't implemented this. But eventually..._
     # In your controller (or wherever the callback URL is)...
     cheddar.token!(code)
 
+    # You are now authorized!
+    cheddar.authorized?
+
 
 ### Lists
 
@@ -31,6 +34,7 @@ _Obviously this isn't implemented this. But eventually..._
 
     # Get the tasks in that list.
     tasks = foobar.tasks
+    tasks = cheddar.lists.find(:id => "42").tasks
 
     # Update that list.
     foobar.update(:title => "Barfoo")
@@ -71,4 +75,8 @@ _Obviously this isn't implemented this. But eventually..._
 ### User
 
     # Get info about yourself.
-    cheddar.me
+    moi = cheddar.me
+
+    moi.lists
+    moi.tasks
+    
