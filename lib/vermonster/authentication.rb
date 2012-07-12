@@ -19,7 +19,7 @@ module Vermonster
 
     # Check if authorized or not.
     def authorized?
-      if @client[:token]
+      if @connection.get("/me").status != 401
         true
       else
         false
