@@ -9,18 +9,23 @@ require 'vermonster/users'
 
 module Vermonster
   class Client
-    attr_accessor :id, :secret, :token
+    attr_accessor :client
 
     def initialize(options={})
       @client = {
-        "id" => options[:id],
-        "secret" => options[:secret]
+        :id => options[:id],
+        :secret => options[:secret]
       }
 
-      @connection = Faraday.new(:url => "http://api.cheddarapp.com/v1") do |f|
-        conn.response :json, :content_type => /\bjson$/
-        
-        conn.adapter Faraday.default_adapter
+      self.connect!
+    end
+
+    def connect!(token = nil)
+      @connection = Faraday.new(:url => "https://api.cheddarapp.com/v1") do |f|
+        f.request :json
+        f.headers["Authorization"] = "Bearer #{token}" if !token.nil?
+        f.response :json, :content_type => /\bjson$/
+        f.adapter Faraday.default_adapter
       end
     end
 
