@@ -3,7 +3,7 @@ module Vermonster
 
     # Returns the URL for authorizing the user.
     def authorize!
-      "http://api.cheddarapp.com/oauth/authorize?client_id=#{@client[:id]}"
+      "https://api.cheddarapp.com/oauth/authorize?client_id=#{@client[:id]}"
     end
 
     # Get the token for the user.
@@ -14,7 +14,7 @@ module Vermonster
 
       @client = @client.merge(:token => response.body["access_token"])
 
-      self.create_connection(@client[:token])
+      self.connect!(@client[:token])
     end
 
     # Check if authorized or not.
