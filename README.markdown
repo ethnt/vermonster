@@ -2,6 +2,8 @@
 
 Vermonster is a way to consume the [Cheddar API](https://cheddarapp.com/developer).
 
+**Want Python instead? Check out [vermonster-py](https://github.com/jpennell/vermonster-py).**
+
 # Objective
 
 _Obviously this isn't implemented yet. But eventually..._
