@@ -22,5 +22,8 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'faraday_middleware', '~> 0.8.8'
   gem.add_dependency 'oauth', '~> 0.4.6'
 
+  gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
+  gem.add_development_dependency 'webmock'
+  gem.add_development_dependency 'vcr'
 end
