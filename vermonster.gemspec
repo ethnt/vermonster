@@ -5,11 +5,11 @@ require "vermonster/version"
 Gem::Specification.new do |gem|
   gem.name        = "vermonster"
   gem.version     = Vermonster::VERSION
-  gem.authors     = ["Ethan Turkeltaub"]
+  gem.authors     = ["Ethan Turkeltaub", "Johnathan Croom"]
   gem.email       = ["ethan.turkeltaub@gmail.com"]
   gem.homepage    = "http://github.com/eturk/vermonster"
-  gem.summary     = %q{Consume all of the Cheddar API.}
-  gem.description = %q{Consume all of the Cheddar API.}
+  gem.summary     = %q{Consume all of the Cheddar (API).}
+  gem.description = %q{Consume all of the Cheddar (API).}
 
   gem.rubyforge_project = "vermonster"
 
