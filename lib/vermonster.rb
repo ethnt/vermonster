@@ -13,14 +13,19 @@ module Vermonster
 
     def initialize(options={})
       @client = {
-        "id" => options[:id],
-        "secret" => options[:secret]
+        :id => options[:id],
+        :secret => options[:secret]
       }
 
-      @connection = Faraday.new(:url => "http://api.cheddarapp.com/v1") do |f|
-        conn.response :json, :content_type => /\bjson$/
-        
-        conn.adapter Faraday.default_adapter
+      self.create_connection
+    end
+
+    def create_connection(token = nil)
+      @connection = Faraday.new(:url => "https://api.cheddarapp.com/v1") do |f|
+        f.request :json
+        f.headers["Authorization"] = "Bearer #{token}" if !token.nil?
+        f.response :json, :content_type => /\bjson$/
+        f.adapter Faraday.default_adapter
       end
     end
 
