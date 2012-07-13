@@ -2,8 +2,14 @@ module Vermonster
   module Authentication
 
     # Returns the URL for authorizing the user.
-    def authorize!
-      "https://api.cheddarapp.com/oauth/authorize?client_id=#{@client[:id]}"
+    def authorize!(options={})
+      url = "https://api.cheddarapp.com/oauth/authorize?client_id=#{@client[:id]}"
+
+      options.each do |key, value|
+        url = url << "&#{key}=#{value}"
+      end
+
+      url
     end
 
     # Get the token for the user.

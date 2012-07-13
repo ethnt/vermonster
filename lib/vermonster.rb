@@ -27,6 +27,12 @@ module Vermonster
         f.response :json, :content_type => /\bjson$/
         f.adapter Faraday.default_adapter
       end
+
+      self
+    end
+
+    def connection
+      @connection
     end
 
     include Authentication
