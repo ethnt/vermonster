@@ -18,9 +18,15 @@ module Vermonster
 
       response = @connection.post "/oauth/token", { :grant_type => "authorization_code", :code => code }
 
-      @client = @client.merge(:token => response.body["access_token"])
+      if response.body["access_token"]
+        @client = @client.merge(:token => response.body["access_token"])
 
-      self.connect!(@client[:token])
+        self.connect!(@client[:token])
+
+        true
+      else
+        false
+      end
     end
 
     # Check if authorized or not.
