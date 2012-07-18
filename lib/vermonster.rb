@@ -12,17 +12,20 @@ module Vermonster
     attr_accessor :client
 
     def initialize(options={})
-      @client = options
+      @client = {
+        :id => options[:id],
+        :secret => options[:secret]
+      }
 
       self.connect!
     end
 
     def connect!(token = nil)
       @connection = Faraday.new(:url => "https://api.cheddarapp.com/v1") do |f|
-        f.adapter Faraday.default_adapter
-        f.headers["Authorization"] = "Bearer #{token}" if !token.nil?
         f.request :json
+        f.headers["Authorization"] = "Bearer #{token}" if !token.nil?
         f.response :json, :content_type => /\bjson$/
+        f.adapter Faraday.default_adapter
       end
 
       self
