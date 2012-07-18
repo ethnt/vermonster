@@ -31,7 +31,7 @@ module Vermonster
 
     # Check if authorized or not.
     def authorized?
-      if Vermonster::Client.connection.get("/me").status != 401
+      if Vermonster::Client.connection.get("me").status != 401
         true
       else
         false
