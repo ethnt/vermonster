@@ -17,7 +17,7 @@ cheddar = Vermonster::Client.new(:id => "oauth-id", :secret => "oauth-secret")
 
 ``` ruby
 # Get the URL for the user to authorize the application.
-url = cheddar.authorize!
+url = cheddar.authorize_url
 
 # Do whatever to send the user to that URL...
 # It redirects back to whatever you sent as callback URL.
@@ -46,14 +46,11 @@ tasks = cheddar.lists.find(:id => "42").tasks
 # Update that list.
 foobar.update(:title => "Barfoo")
 
-# Destroy that list!
-foobar.destroy!
-
 # Make a new list called "Barfoo".
-barfoo = cheddar.lists.new(:title => "Barfoo")
+barfoo = cheddar.lists.create(:title => "Barfoo")
 
 # Reorder your lists.
-barfoo.reorder([42, 12, 23])
+cheddar.lists.reorder([42, 12, 23])
 ```
 
 
@@ -67,7 +64,7 @@ task = cheddar.task.find(:id => "42")
 task.update(:text => "Boom!")
 
 # Create a task in a list.
-foobar.tasks.new(:text => "Be awesome!")
+foobar.tasks.create(:text => "Be awesome!")
 
 # Reorder...
 foobar.tasks.reorder([42, 12])

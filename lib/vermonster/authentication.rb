@@ -1,8 +1,7 @@
 module Vermonster
   module Authentication
-
     # Returns the URL for authorizing the user.
-    def authorize!(options={})
+    def authorize_url(options={})
       url = "https://api.cheddarapp.com/oauth/authorize?client_id=#{@client[:id]}"
 
       options.each do |key, value|
@@ -14,18 +13,33 @@ module Vermonster
 
     # Get the token for the user.
     def token!(code)
-      @connection.basic_auth(@client[:id], @client[:secret])
+      Vermonster::Client.connection.basic_auth(@client[:id], @client[:secret])
 
-      response = @connection.post "/oauth/token", { :grant_type => "authorization_code", :code => code }
+      response = Vermonster::Client.connection.post "/oauth/token", { :grant_type => "authorization_code", :code => code }
 
-      @client = @client.merge(:token => response.body["access_token"])
+      if response.body["access_token"]
+        @client = @client.merge(:token => response.body["access_token"])
+
+        self.connect!(@client[:token])
+
+        authorized?
+      else
+        false
+      end
+    end
+
+    # Skip the code and just use the developer's user access token.
+    def use_token!(token)
+      @client = @client.merge(:token => token)
 
       self.connect!(@client[:token])
+
+      authorized?
     end
 
     # Check if authorized or not.
     def authorized?
-      if @connection.get("/me").status != 401
+      if Vermonster::Client.connection.get("me").status == 200
         true
       else
         false
