@@ -6,7 +6,7 @@ Vermonster is a way to consume the [Cheddar API](https://cheddarapp.com/develope
 
 ## Objective
 
-_Obviously this isn't implemented yet. But eventually..._
+_Obviously this isn't all implemented yet. But eventually..._
 
 ``` ruby
 cheddar = Vermonster::Client.new(:id => "oauth-id", :secret => "oauth-secret")
@@ -37,11 +37,11 @@ cheddar.authorized?
 lists = cheddar.lists.all
 
 # Get a list called "Foobar" with an ID of 42.
-foobar = cheddar.lists.find(:id => "42")
+foobar = cheddar.lists.find(42)
 
 # Get the tasks in that list.
 tasks = foobar.tasks
-tasks = cheddar.lists.find(:id => "42").tasks
+tasks = cheddar.lists.find(42).tasks
 
 # Update that list.
 foobar.update(:title => "Barfoo")
@@ -58,7 +58,10 @@ cheddar.lists.reorder([42, 12, 23])
 
 ``` ruby
 # Get one task.
-task = cheddar.task.find(:id => "42")
+task = cheddar.task.find(42)
+
+# Get tasks in a list
+tasks = cheddar.tasks.from_list(42)
 
 # Update that task.
 task.update(:text => "Boom!")
