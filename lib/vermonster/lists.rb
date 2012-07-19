@@ -11,6 +11,7 @@ module Vermonster
 
       # Note this overrides Hash#update. Use Hash#merge! instead.
       def update(options = {})
+        self.merge!(Vermonster::Client.connection.put("lists/#{self["id"]}", "{\"list\": #{options.to_json}}").body)
       end
 
       def tasks
@@ -33,9 +34,10 @@ module Vermonster
         end
 
         def create(options = {})
+          List.new(Vermonster::Client.connection.post("lists", "{\"list\": #{options.to_json}}").body)
         end
 
-        def reorder(options = {})
+        def reorder(lists)
         end
       end
     end
