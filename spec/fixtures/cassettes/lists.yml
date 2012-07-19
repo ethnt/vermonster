@@ -330,4 +330,62 @@ http_interactions:
         using Cheddar!","updated_at":"2012-07-18T19:33:13Z","entities":[],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/182744"}]'
     http_version: 
   recorded_at: Thu, 19 Jul 2012 12:48:14 GMT
+- request:
+    method: put
+    uri: https://api.cheddarapp.com/v1/lists/24200
+    body:
+      encoding: US-ASCII
+      string: ! '{"list": {"title":"Learn Vermonster"}}'
+    headers:
+      Authorization:
+      - Bearer 6e8c9e570805e75d683a963b1290116a
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - ! '*,X-Pusher-Socket-ID,Content-Type,Authorization'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, OPTIONS
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Request-Method:
+      - ! '*'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 19 Jul 2012 17:27:55 GMT
+      Etag:
+      - ! '"244e1248ad5cfb680fe1d78ef47f2102"'
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - a4b234cd2789c1d106315adfc91a9a89
+      X-Runtime:
+      - '0.032978'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '568'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"archived_at":null,"created_at":"2012-07-18T19:33:13Z","id":24200,"position":1,"slug":"QM8","title":"Learn
+        Vermonster","updated_at":"2012-07-19T17:27:55Z","url":"https://api.cheddarapp.com/v1/lists/24200","user":{"created_at":"2012-07-18T19:33:13Z","first_name":null,"has_plus":false,"id":13055,"last_name":null,"updated_at":"2012-07-18T19:33:13Z","username":"vermonster","url":"https://api.cheddarapp.com/v1/users/13055","socket":{"auth_url":"https://api.cheddarapp.com/pusher/auth","api_key":"675f10a650f18b4eb0a8","app_id":"15197","channel":"private-user-13055"}}}'
+    http_version: 
+  recorded_at: Thu, 19 Jul 2012 17:27:55 GMT
 recorded_with: VCR 2.2.3

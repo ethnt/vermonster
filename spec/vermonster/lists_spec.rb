@@ -60,7 +60,7 @@ describe Vermonster::Lists do
   end
 
   describe "::List" do
-    describe "tasks" do
+    describe "#tasks" do
       before do
         @tasks = @cheddar.lists.find(24200).tasks
       end
@@ -76,6 +76,17 @@ describe Vermonster::Lists do
       it "should return the correct information" do
         @tasks.first["display_text"].should == "Welcome to Cheddar! Click the checkbox to complete tasks"
         @tasks.first["id"].should == 182736
+      end
+    end
+
+    describe "update()" do
+      before do
+        @list = @cheddar.lists.find(24200)
+        @list.update(:title => "Learn Vermonster")
+      end
+
+      it "should return the correct information" do
+        @list["title"].should == "Learn Vermonster"
       end
     end
   end
