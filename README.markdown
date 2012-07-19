@@ -87,9 +87,6 @@ foobar.tasks.archive.all
 ``` ruby
 # Get info about yourself.
 moi = cheddar.me
-
-moi.lists
-moi.tasks
 ```
 
 ## Contributing
