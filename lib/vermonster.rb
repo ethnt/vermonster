@@ -1,6 +1,5 @@
 require 'faraday'
 require 'faraday_middleware'
-require 'oauth'
 
 require 'vermonster/authentication'
 require 'vermonster/lists'
