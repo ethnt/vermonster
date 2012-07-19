@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/intridea/hashie.git
+  revision: 8dd0fec950c33373c5c954d7ac72df4724334b12
+  specs:
+    hashie (2.0.0.beta)
+
 PATH
   remote: .
   specs:
@@ -34,6 +40,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  hashie!
   rake
   rspec
   vcr
