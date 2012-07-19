@@ -10,7 +10,7 @@ describe Vermonster::Tasks do
   end
 
   describe "#tasks" do
-    describe "#find(id)" do
+    describe "#find" do
       before do
         @task = @cheddar.tasks.find(182736)
       end
@@ -25,7 +25,7 @@ describe Vermonster::Tasks do
       end
     end
 
-    describe "#from_list(id)" do
+    describe "#from_list" do
       before do
         @tasks = @cheddar.tasks.from_list(24200)
       end
@@ -41,6 +41,18 @@ describe Vermonster::Tasks do
       it "should return the correct information" do
         @tasks.first["display_text"].should == "Welcome to Cheddar! Click the checkbox to complete tasks"
         @tasks.first["id"].should == 182736
+      end
+    end
+  end
+
+  describe "::Task" do
+    describe "#initialize" do
+      before do
+        @task = @cheddar.tasks.find(182736)
+      end
+
+      it "should return the same information from generated instance variables as key-value request" do
+        @task["display_text"].should == @task.display_text
       end
     end
   end

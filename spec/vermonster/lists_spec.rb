@@ -29,7 +29,7 @@ describe Vermonster::Lists do
       end
     end
 
-    describe "#find(id)" do
+    describe "#find" do
       before do
         @list = @cheddar.lists.find(24200)
       end
@@ -44,7 +44,7 @@ describe Vermonster::Lists do
       end
     end
 
-    describe "#create()" do
+    describe "#create" do
       before do
         @list = @cheddar.lists.create(:title => "Foobar")
       end
@@ -60,6 +60,16 @@ describe Vermonster::Lists do
   end
 
   describe "::List" do
+    describe "#initialize" do
+      before do
+        @list = Vermonster::Lists::List.new(Vermonster::Client.connection.get("lists/24200").body)
+      end
+
+      it "should return the same information from generated instance variables as key-value request" do
+        @list["title"].should == @list.title
+      end
+    end
+
     describe "#tasks" do
       before do
         @tasks = @cheddar.lists.find(24200).tasks
@@ -79,7 +89,7 @@ describe Vermonster::Lists do
       end
     end
 
-    describe "update()" do
+    describe "#update" do
       before do
         @list = @cheddar.lists.find(24200)
         @list.update(:title => "Learn Vermonster")

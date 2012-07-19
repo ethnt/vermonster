@@ -41,6 +41,18 @@ describe Vermonster::Users do
     end
   end
 
+  describe "::User" do
+    describe "#initalize" do
+      before do
+        @moi = @cheddar.me
+      end
+
+      it "should return the same information from generated instance variables as key-value request" do
+        @moi["username"].should == @moi.username
+      end
+    end
+  end
+
   after do
     VCR.eject_cassette
   end
