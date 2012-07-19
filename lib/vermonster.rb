@@ -34,6 +34,7 @@ module Vermonster
 
     include Authentication
     include Lists
+    include Tasks
     include Users
   end
 end
