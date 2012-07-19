@@ -11,7 +11,7 @@ module Vermonster
 
     class User < Hash
       def initialize(data)
-        self.update(data)
+        self.merge!(data)
       end
 
       # Get information about authorized user.
