@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.cheddarapp.com/v1/me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 6e8c9e570805e75d683a963b1290116a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - ! '*,X-Pusher-Socket-ID,Content-Type,Authorization'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, OPTIONS
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Request-Method:
+      - ! '*'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 19 Jul 2012 12:48:26 GMT
+      Etag:
+      - ! '"ef42e623e164e34871846180e276f9de"'
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - 09c86ae66594dbd6f9b753b2c1b8f35b
+      X-Runtime:
+      - '0.016478'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '354'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"created_at":"2012-07-18T19:33:13Z","first_name":null,"has_plus":false,"id":13055,"last_name":null,"updated_at":"2012-07-18T19:33:13Z","username":"vermonster","url":"https://api.cheddarapp.com/v1/users/13055","socket":{"auth_url":"https://api.cheddarapp.com/pusher/auth","api_key":"675f10a650f18b4eb0a8","app_id":"15197","channel":"private-user-13055"}}'
+    http_version: 
+  recorded_at: Thu, 19 Jul 2012 12:48:26 GMT
+- request:
+    method: get
+    uri: https://api.cheddarapp.com/v1/me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 19 Jul 2012 12:48:27 GMT
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - a73efb0118c0621972a6b1173948ad58
+      X-Runtime:
+      - '0.003536'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '85'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"error":"not_authorized","error_description":"This method requires
+        authentication."}'
+    http_version: 
+  recorded_at: Thu, 19 Jul 2012 12:48:27 GMT
+recorded_with: VCR 2.2.3

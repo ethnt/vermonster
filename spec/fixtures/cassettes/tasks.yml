@@ -1,0 +1,216 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.cheddarapp.com/v1/me
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 6e8c9e570805e75d683a963b1290116a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - ! '*,X-Pusher-Socket-ID,Content-Type,Authorization'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, OPTIONS
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Request-Method:
+      - ! '*'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 19 Jul 2012 12:48:06 GMT
+      Etag:
+      - ! '"ef42e623e164e34871846180e276f9de"'
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - 0802b6d651596ebda41dc34189ec2be3
+      X-Runtime:
+      - '0.018486'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '354'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"created_at":"2012-07-18T19:33:13Z","first_name":null,"has_plus":false,"id":13055,"last_name":null,"updated_at":"2012-07-18T19:33:13Z","username":"vermonster","url":"https://api.cheddarapp.com/v1/users/13055","socket":{"auth_url":"https://api.cheddarapp.com/pusher/auth","api_key":"675f10a650f18b4eb0a8","app_id":"15197","channel":"private-user-13055"}}'
+    http_version: 
+  recorded_at: Thu, 19 Jul 2012 12:48:06 GMT
+- request:
+    method: get
+    uri: https://api.cheddarapp.com/v1/tasks/182736
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 6e8c9e570805e75d683a963b1290116a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - ! '*,X-Pusher-Socket-ID,Content-Type,Authorization'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, OPTIONS
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Request-Method:
+      - ! '*'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 19 Jul 2012 12:48:07 GMT
+      Etag:
+      - ! '"adc000a51348ecea8be75c8b75be10ac"'
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - ed7c5ac4adf4537caf45778b0e5d4714
+      X-Runtime:
+      - '0.017871'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '442'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"archived_at":null,"completed_at":null,"created_at":"2012-07-18T19:33:13Z","display_html":"Welcome
+        to Cheddar! Click the checkbox to complete tasks","display_text":"Welcome
+        to Cheddar! Click the checkbox to complete tasks","id":182736,"list_id":24200,"position":1,"text":"Welcome
+        to Cheddar! Click the checkbox to complete tasks","updated_at":"2012-07-18T19:33:13Z","entities":[],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/182736"}'
+    http_version: 
+  recorded_at: Thu, 19 Jul 2012 12:48:07 GMT
+- request:
+    method: get
+    uri: https://api.cheddarapp.com/v1/lists/24200/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 6e8c9e570805e75d683a963b1290116a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - ! '*,X-Pusher-Socket-ID,Content-Type,Authorization'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, OPTIONS
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Request-Method:
+      - ! '*'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 19 Jul 2012 12:48:08 GMT
+      Etag:
+      - ! '"74e53991f1f482ee7ffe36665acf0b4e"'
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - 7016f0153f7d2e112f53eef35ff4aeb4
+      X-Runtime:
+      - '0.028284'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '5843'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '[{"archived_at":null,"completed_at":null,"created_at":"2012-07-18T19:33:13Z","display_html":"Welcome
+        to Cheddar! Click the checkbox to complete tasks","display_text":"Welcome
+        to Cheddar! Click the checkbox to complete tasks","id":182736,"list_id":24200,"position":1,"text":"Welcome
+        to Cheddar! Click the checkbox to complete tasks","updated_at":"2012-07-18T19:33:13Z","entities":[],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/182736"},{"archived_at":null,"completed_at":null,"created_at":"2012-07-18T19:33:13Z","display_html":"Type
+        in the box and press enter to make new tasks","display_text":"Type in the
+        box and press enter to make new tasks","id":182737,"list_id":24200,"position":2,"text":"Type
+        in the box and press enter to make new tasks","updated_at":"2012-07-18T19:33:13Z","entities":[],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/182737"},{"archived_at":null,"completed_at":null,"created_at":"2012-07-18T19:33:13Z","display_html":"Use
+        <a href=\"http://daringfireball.net/projects/markdown\" rel=\"external nofollow\"
+        class=\"link\">Markdown</a> in your tasks for extra <strong>awesome</strong>.
+        Read the <a href=\"https://cheddarapp.com/text\" rel=\"external nofollow\"
+        class=\"link\">super simple guide</a>.","display_text":"Use Markdown in your
+        tasks for extra awesome. Read the super simple guide.","id":182738,"list_id":24200,"position":3,"text":"Use
+        [Markdown](http://daringfireball.net/projects/markdown) in your tasks for
+        extra **awesome**. Read the [super simple guide](https://cheddarapp.com/text).","updated_at":"2012-07-18T19:33:13Z","entities":[{"type":"link","text":"[Markdown](http://daringfireball.net/projects/markdown)","display_text":"Markdown","indices":[4,59],"url":"http://daringfireball.net/projects/markdown","display_indices":[4,12]},{"type":"double_emphasis","text":"**awesome**","display_text":"awesome","indices":[84,95],"display_indices":[37,44]},{"type":"link","text":"[super
+        simple guide](https://cheddarapp.com/text)","display_text":"super simple guide","indices":[106,155],"url":"https://cheddarapp.com/text","display_indices":[55,73]}],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/182738"},{"archived_at":null,"completed_at":null,"created_at":"2012-07-18T19:33:13Z","display_html":"Use
+        <a href=\"#tag-tags\" class=\"tag\">#tags</a> to organize your tasks","display_text":"Use
+        #tags to organize your tasks","id":182739,"list_id":24200,"position":4,"text":"Use
+        #tags to organize your tasks","updated_at":"2012-07-18T19:33:13Z","entities":[{"type":"tag","text":"#tags","display_text":"#tags","indices":[4,9],"tag_name":"tags","display_indices":[4,9]}],"tags":[{"id":30,"name":"tags"}],"url":"https://api.cheddarapp.com/v1/tasks/182739"},{"archived_at":null,"completed_at":null,"created_at":"2012-07-18T19:33:13Z","display_html":"Click
+        the pencil next to a task or the title of your list to edit it","display_text":"Click
+        the pencil next to a task or the title of your list to edit it","id":182740,"list_id":24200,"position":5,"text":"Click
+        the pencil next to a task or the title of your list to edit it","updated_at":"2012-07-18T19:33:13Z","entities":[],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/182740"},{"archived_at":null,"completed_at":null,"created_at":"2012-07-18T19:33:13Z","display_html":"Click
+        <em>Archive Tasks</em> in the top right to archive lots of tasks at once","display_text":"Click
+        Archive Tasks in the top right to archive lots of tasks at once","id":182741,"list_id":24200,"position":6,"text":"Click
+        *Archive Tasks* in the top right to archive lots of tasks at once","updated_at":"2012-07-18T19:33:13Z","entities":[{"type":"emphasis","text":"*Archive
+        Tasks*","display_text":"Archive Tasks","indices":[6,21],"display_indices":[6,19]}],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/182741"},{"archived_at":null,"completed_at":null,"created_at":"2012-07-18T19:33:13Z","display_html":"Click
+        on <a href=\"https://cheddarapp.com\" rel=\"external nofollow\" class=\"link\">Your
+        Lists</a> to see all of your lists. <strong>You can make more lists there.</strong>","display_text":"Click
+        on Your Lists to see all of your lists. You can make more lists there.","id":182742,"list_id":24200,"position":7,"text":"Click
+        on [Your Lists](https://cheddarapp.com) to see all of your lists. **You can
+        make more lists there.**","updated_at":"2012-07-18T19:33:13Z","entities":[{"type":"link","text":"[Your
+        Lists](https://cheddarapp.com)","display_text":"Your Lists","indices":[9,45],"url":"https://cheddarapp.com","display_indices":[9,19]},{"type":"double_emphasis","text":"**You
+        can make more lists there.**","display_text":"You can make more lists there.","indices":[72,106],"display_indices":[46,76]}],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/182742"},{"archived_at":null,"completed_at":null,"created_at":"2012-07-18T19:33:13Z","display_html":"Checkout
+        the <a href=\"https://cheddarapp.com/support\" rel=\"external nofollow\" class=\"link\">support
+        page</a> if you need help or have questions","display_text":"Checkout the
+        support page if you need help or have questions","id":182743,"list_id":24200,"position":8,"text":"Checkout
+        the [support page](https://cheddarapp.com/support) if you need help or have
+        questions","updated_at":"2012-07-18T19:33:13Z","entities":[{"type":"link","text":"[support
+        page](https://cheddarapp.com/support)","display_text":"support page","indices":[13,59],"url":"https://cheddarapp.com/support","display_indices":[13,25]}],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/182743"},{"archived_at":null,"completed_at":null,"created_at":"2012-07-18T19:33:13Z","display_html":"Enjoy
+        using Cheddar!","display_text":"Enjoy using Cheddar!","id":182744,"list_id":24200,"position":9,"text":"Enjoy
+        using Cheddar!","updated_at":"2012-07-18T19:33:13Z","entities":[],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/182744"}]'
+    http_version: 
+  recorded_at: Thu, 19 Jul 2012 12:48:08 GMT
+recorded_with: VCR 2.2.3

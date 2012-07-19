@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe Vermonster::Lists do
   before do
-    VCR.insert_cassette 'lists', :record => :all
+    VCR.insert_cassette 'lists', :record => :new_episodes
   end
 
   before(:each) do
@@ -29,7 +29,7 @@ describe Vermonster::Lists do
       end
     end
 
-    describe "#lists.find(id)" do
+    describe "#find(id)" do
       before do
         @list = @cheddar.lists.find(24200)
       end
@@ -41,6 +41,20 @@ describe Vermonster::Lists do
       it "should return the correct information" do
         @list["title"].should == "Learn Cheddar"
         @list["user"]["username"].should == "vermonster"
+      end
+    end
+
+    describe "#create()" do
+      before do
+        @list = @cheddar.lists.create(:title => "Foobar")
+      end
+
+      it "should be an instance of List" do
+        @list.should be_an_instance_of Vermonster::Lists::List
+      end
+
+      it "should return the correct information" do
+        @list["title"].should == "Foobar"
       end
     end
   end

@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe Vermonster::Tasks do
   before do
-    VCR.insert_cassette 'tasks', :record => :all
+    VCR.insert_cassette 'tasks', :record => :new_episodes
   end
 
   before(:each) do

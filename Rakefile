@@ -6,3 +6,11 @@ RSpec::Core::RakeTask.new(:spec) do |t|
 end
 
 task :default => :spec
+
+namespace :vcr do
+
+  desc "Delete all of the saves cassettes."
+  task :clear do
+    exec("rm -rf spec/fixtures/cassettes/*")
+  end
+end
