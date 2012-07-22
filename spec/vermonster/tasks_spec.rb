@@ -55,6 +55,17 @@ describe Vermonster::Tasks do
         @task["display_text"].should == @task.display_text
       end
     end
+
+    describe "#update" do
+      before do
+        @task = @cheddar.tasks.find(182737)
+        @task.update(:text => "Welcome to Vermonster!")
+      end
+
+      it "should return the correct information" do
+        @task["text"].should == "Welcome to Vermonster!"
+      end
+    end
   end
 
   after do

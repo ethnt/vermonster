@@ -213,4 +213,219 @@ http_interactions:
         using Cheddar!","updated_at":"2012-07-18T19:33:13Z","entities":[],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/182744"}]'
     http_version: 
   recorded_at: Thu, 19 Jul 2012 12:48:08 GMT
+- request:
+    method: get
+    uri: https://api.cheddarapp.com/v1/tasks/24200
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 6e8c9e570805e75d683a963b1290116a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache, private
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Jul 2012 02:53:35 GMT
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - 62381c3d4238a2dd26b9966da1029c5e
+      X-Runtime:
+      - '0.020529'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '82'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"error":"unauthorized","error_description":"You don''t have access
+        to this list."}'
+    http_version: 
+  recorded_at: Sun, 22 Jul 2012 02:53:35 GMT
+- request:
+    method: put
+    uri: https://api.cheddarapp.com/v1/tasks/
+    body:
+      encoding: US-ASCII
+      string: ! '{"task": {"text":"Welcome to Vermonster!"}}'
+    headers:
+      Authorization:
+      - Bearer 6e8c9e570805e75d683a963b1290116a
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      Date:
+      - Sun, 22 Jul 2012 02:53:36 GMT
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - 9f98051139a361186dd1ffc1991e943c
+      X-Runtime:
+      - '0.027514'
+      Content-Length:
+      - '728'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! "<!DOCTYPE html>\n<html>\n<head>\n  <title>The page you were looking
+        for doesn't exist (404)</title>\n  <style type=\"text/css\">\n    body { background-color:
+        #fff; color: #666; text-align: center; font-family: arial, sans-serif; }\n
+        \   div.dialog {\n      width: 25em;\n      padding: 0 4em;\n      margin:
+        4em auto 0 auto;\n      border: 1px solid #ccc;\n      border-right-color:
+        #999;\n      border-bottom-color: #999;\n    }\n    h1 { font-size: 100%;
+        color: #f00; line-height: 1.5em; }\n  </style>\n</head>\n\n<body>\n  <!--
+        This file lives in public/404.html -->\n  <div class=\"dialog\">\n    <h1>The
+        page you were looking for doesn't exist.</h1>\n    <p>You may have mistyped
+        the address or the page may have moved.</p>\n  </div>\n</body>\n</html>\n"
+    http_version: 
+  recorded_at: Sun, 22 Jul 2012 02:53:36 GMT
+- request:
+    method: get
+    uri: https://api.cheddarapp.com/v1/tasks/182737
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 6e8c9e570805e75d683a963b1290116a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - ! '*,X-Pusher-Socket-ID,Content-Type,Authorization'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, OPTIONS
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Request-Method:
+      - ! '*'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Jul 2012 02:57:34 GMT
+      Etag:
+      - ! '"2fdb74999a1766fc9eafeda9bd261bb1"'
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - c0063279bfd7e3d6eda89f4e98394163
+      X-Runtime:
+      - '0.025865'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '421'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"archived_at":null,"completed_at":null,"created_at":"2012-07-18T19:33:13Z","display_html":"Type
+        in the box and press enter to make new tasks","display_text":"Type in the
+        box and press enter to make new tasks","id":182737,"list_id":24200,"position":2,"text":"Type
+        in the box and press enter to make new tasks","updated_at":"2012-07-18T19:33:13Z","entities":[],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/182737"}'
+    http_version: 
+  recorded_at: Sun, 22 Jul 2012 02:57:35 GMT
+- request:
+    method: put
+    uri: https://api.cheddarapp.com/v1/tasks/182737
+    body:
+      encoding: US-ASCII
+      string: ! '{"task": {"text":"Welcome to Vermonster!"}}'
+    headers:
+      Authorization:
+      - Bearer 6e8c9e570805e75d683a963b1290116a
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - ! '*,X-Pusher-Socket-ID,Content-Type,Authorization'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, OPTIONS
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Request-Method:
+      - ! '*'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 22 Jul 2012 02:57:35 GMT
+      Etag:
+      - ! '"4b945f8bb9408b0ff71e883622c334db"'
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - 0c1f1c70d47772638382966fd06aa254
+      X-Runtime:
+      - '0.035112'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '340'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"archived_at":null,"completed_at":null,"created_at":"2012-07-18T19:33:13Z","display_html":"Welcome
+        to Vermonster!","display_text":"Welcome to Vermonster!","id":182737,"list_id":24200,"position":2,"text":"Welcome
+        to Vermonster!","updated_at":"2012-07-22T02:57:35Z","entities":[],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/182737"}'
+    http_version: 
+  recorded_at: Sun, 22 Jul 2012 02:57:35 GMT
 recorded_with: VCR 2.2.3

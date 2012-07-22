@@ -13,6 +13,7 @@ module Vermonster
 
       # Note this overrides Hash#update. Use Hash#merge! instead.
       def update(options = {})
+        self.merge!(Vermonster::Client.connection.put("tasks/#{self["id"]}", "{\"task\": #{options.to_json}}").body)
       end
 
       class << self
