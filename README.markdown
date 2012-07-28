@@ -61,6 +61,9 @@ cheddar.lists.reorder([42, 12, 23])
 task = cheddar.task.find(42)
 
 # Get tasks in a list
+list = cheddar.lists.find(42)
+list.tasks
+
 tasks = cheddar.tasks.from_list(42)
 
 # Update that task.
@@ -70,15 +73,13 @@ task.update(:text => "Boom!")
 foobar.tasks.create(42, :text => "Be awesome!")
 
 # Reorder...
-foobar.tasks.reorder([42, 12])
+foobar.tasks.reorder(24200, [42, 12])
 
 # Archive completed items
-foobar.tasks.archive
-foobar.tasks.archive.completed
+foobar.tasks.archive(42)
 
 # Archive all items!
-foobar.tasks.archive!
-foobar.tasks.archive.all
+foobar.tasks.archive!(42)
 ```
 
 

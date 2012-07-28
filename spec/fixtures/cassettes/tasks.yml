@@ -489,4 +489,220 @@ http_interactions:
         to the bar.","updated_at":"2012-07-28T22:39:22Z","entities":[],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/209582"}'
     http_version: 
   recorded_at: Sat, 28 Jul 2012 22:39:22 GMT
+- request:
+    method: post
+    uri: https://api.cheddarapp.com/v1/lists/24393/tasks/archive_completed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 6e8c9e570805e75d683a963b1290116a
+      Content-Length:
+      - '0'
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Access-Control-Allow-Headers:
+      - ! '*,X-Pusher-Socket-ID,Content-Type,Authorization'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, OPTIONS
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Request-Method:
+      - ! '*'
+      Cache-Control:
+      - no-cache
+      Date:
+      - Sat, 28 Jul 2012 23:01:43 GMT
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - dea477268d37db8a71dc53cc90540846
+      X-Runtime:
+      - '0.024853'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Sat, 28 Jul 2012 23:01:43 GMT
+- request:
+    method: get
+    uri: https://api.cheddarapp.com/v1/lists/24393
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 6e8c9e570805e75d683a963b1290116a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - ! '*,X-Pusher-Socket-ID,Content-Type,Authorization'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, OPTIONS
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Request-Method:
+      - ! '*'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 28 Jul 2012 23:01:43 GMT
+      Etag:
+      - ! '"644e726d0add3fc2b21e9cade1a083ec"'
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - c25f3088c20bcd9a091f1dbe157736b5
+      X-Runtime:
+      - '0.039234'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '576'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"archived_at":"2012-07-19T12:29:26Z","created_at":"2012-07-19T12:27:58Z","id":24393,"position":2,"slug":"QT9","title":"Foobar","updated_at":"2012-07-19T12:29:27Z","url":"https://api.cheddarapp.com/v1/lists/24393","user":{"created_at":"2012-07-18T19:33:13Z","first_name":null,"has_plus":false,"id":13055,"last_name":null,"updated_at":"2012-07-18T19:33:13Z","username":"vermonster","url":"https://api.cheddarapp.com/v1/users/13055","socket":{"auth_url":"https://api.cheddarapp.com/pusher/auth","api_key":"675f10a650f18b4eb0a8","app_id":"15197","channel":"private-user-13055"}}}'
+    http_version: 
+  recorded_at: Sat, 28 Jul 2012 23:01:43 GMT
+- request:
+    method: get
+    uri: https://api.cheddarapp.com/v1/lists/24393/tasks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 6e8c9e570805e75d683a963b1290116a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - ! '*,X-Pusher-Socket-ID,Content-Type,Authorization'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, OPTIONS
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Request-Method:
+      - ! '*'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 28 Jul 2012 23:01:44 GMT
+      Etag:
+      - ! '"d751713988987e9331980363e24189ce"'
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - c13c6ba00bd152e36a2b2ce2ef7584b7
+      X-Runtime:
+      - '0.023897'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '[]'
+    http_version: 
+  recorded_at: Sat, 28 Jul 2012 23:01:44 GMT
+- request:
+    method: post
+    uri: https://api.cheddarapp.com/v1/lists/24393/tasks/archive_all
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 6e8c9e570805e75d683a963b1290116a
+      Content-Length:
+      - '0'
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Access-Control-Allow-Headers:
+      - ! '*,X-Pusher-Socket-ID,Content-Type,Authorization'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, OPTIONS
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Request-Method:
+      - ! '*'
+      Cache-Control:
+      - no-cache
+      Date:
+      - Sat, 28 Jul 2012 23:03:01 GMT
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - 6ea1fa6747d5bb9970d910e7344a3fed
+      X-Runtime:
+      - '0.022247'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Sat, 28 Jul 2012 23:03:01 GMT
 recorded_with: VCR 2.2.3

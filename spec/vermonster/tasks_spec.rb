@@ -57,6 +57,26 @@ describe Vermonster::Tasks do
         @task["text"].should == "Foo to the bar."
       end
     end
+
+    describe "#archive" do
+      before do
+        @cheddar.tasks.archive(24393)
+      end
+
+      it "should archive all completed tasks" do
+        @cheddar.lists.find(24393).tasks.should be_empty
+      end
+    end
+
+    describe "#archive!" do
+      before do
+        @cheddar.tasks.archive!(24393)
+      end
+
+      it "should archive all tasks" do
+        @cheddar.lists.find(24393).tasks.should be_empty
+      end
+    end
   end
 
   describe "::Task" do

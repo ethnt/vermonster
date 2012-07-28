@@ -35,7 +35,15 @@ module Vermonster
           Task.new(Vermonster::Client.connection.post("lists/#{list}/tasks", "{\"task\": #{options.to_json}}").body)
         end
 
-        def reorder(options = {})
+        def reorder(list, options = {})
+        end
+
+        def archive(list)
+          Vermonster::Client.connection.post("lists/#{list}/tasks/archive_completed")
+        end
+
+        def archive!(list)
+          Vermonster::Client.connection.post("lists/#{list}/tasks/archive_all")
         end
       end
     end
