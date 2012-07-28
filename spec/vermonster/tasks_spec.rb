@@ -30,7 +30,7 @@ describe Vermonster::Tasks do
         @tasks = @cheddar.tasks.from_list(24200)
       end
 
-      it "should be an intance of Array" do
+      it "should be an instance of Array" do
         @tasks.should be_an_instance_of Array
       end
 
@@ -41,6 +41,20 @@ describe Vermonster::Tasks do
       it "should return the correct information" do
         @tasks.first["display_text"].should == "Welcome to Cheddar! Click the checkbox to complete tasks"
         @tasks.first["id"].should == 182736
+      end
+    end
+
+    describe "#create" do
+      before do
+        @task = @cheddar.tasks.create(24200, :text => "Foo to the bar.")
+      end
+
+      it "should be an instance of Task" do
+        @task.should be_an_instance_of Vermonster::Tasks::Task
+      end
+
+      it "should return the correct information" do
+        @task["text"].should == "Foo to the bar."
       end
     end
   end

@@ -428,4 +428,65 @@ http_interactions:
         to Vermonster!","updated_at":"2012-07-22T02:57:35Z","entities":[],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/182737"}'
     http_version: 
   recorded_at: Sun, 22 Jul 2012 02:57:35 GMT
+- request:
+    method: post
+    uri: https://api.cheddarapp.com/v1/lists/24200/tasks
+    body:
+      encoding: US-ASCII
+      string: ! '{"task": {"text":"Foo to the bar."}}'
+    headers:
+      Authorization:
+      - Bearer 6e8c9e570805e75d683a963b1290116a
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Access-Control-Allow-Headers:
+      - ! '*,X-Pusher-Socket-ID,Content-Type,Authorization'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, OPTIONS
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Request-Method:
+      - ! '*'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 28 Jul 2012 22:39:22 GMT
+      Etag:
+      - ! '"8dd90521b1d6c0028e31994eebe893f6"'
+      Location:
+      - https://api.cheddarapp.com/v1/tasks/209582
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - bb03e51b1736df2f689ab69885eb3873
+      X-Runtime:
+      - '0.039128'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '320'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"archived_at":null,"completed_at":null,"created_at":"2012-07-28T22:39:22Z","display_html":"Foo
+        to the bar.","display_text":"Foo to the bar.","id":209582,"list_id":24200,"position":10,"text":"Foo
+        to the bar.","updated_at":"2012-07-28T22:39:22Z","entities":[],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/209582"}'
+    http_version: 
+  recorded_at: Sat, 28 Jul 2012 22:39:22 GMT
 recorded_with: VCR 2.2.3

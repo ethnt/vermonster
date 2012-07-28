@@ -67,7 +67,7 @@ tasks = cheddar.tasks.from_list(42)
 task.update(:text => "Boom!")
 
 # Create a task in a list.
-foobar.tasks.create(:text => "Be awesome!")
+foobar.tasks.create(42, :text => "Be awesome!")
 
 # Reorder...
 foobar.tasks.reorder([42, 12])

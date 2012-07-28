@@ -31,7 +31,8 @@ module Vermonster
           Task.new(Vermonster::Client.connection.get("tasks/#{id}").body)
         end
 
-        def create(options = {})
+        def create(list, options = {})
+          Task.new(Vermonster::Client.connection.post("lists/#{list}/tasks", "{\"task\": #{options.to_json}}").body)
         end
 
         def reorder(options = {})
