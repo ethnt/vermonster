@@ -17,6 +17,7 @@ module Vermonster
       end
 
       def move(list)
+        self.replace(Vermonster::Client.connection.put("tasks/#{self["id"]}/move", "{\"task\": { \"list_id\": #{list} } }").body)
       end
 
       class << self

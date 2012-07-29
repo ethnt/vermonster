@@ -100,6 +100,17 @@ describe Vermonster::Tasks do
         @task["text"].should == "Welcome to Vermonster!"
       end
     end
+
+    describe "#move" do
+      before do
+        @task = @cheddar.tasks.find(209582)
+        @task.move(24398)
+      end
+
+      it "should move the task" do
+        @task["list_id"].should == 24398
+      end
+    end
   end
 
   after do

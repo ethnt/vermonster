@@ -35,7 +35,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 28 Jul 2012 23:02:59 GMT
+      - Sun, 29 Jul 2012 23:01:39 GMT
       Etag:
       - ! '"ef42e623e164e34871846180e276f9de"'
       Server:
@@ -43,9 +43,9 @@ http_interactions:
       X-Rack-Cache:
       - miss
       X-Request-Id:
-      - fcf3ee4d08713b87c1fd0f73648ef8a9
+      - 06b58d0eb7ffa8505f0e70f88a231dba
       X-Runtime:
-      - '0.028728'
+      - '0.014116'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -56,7 +56,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"created_at":"2012-07-18T19:33:13Z","first_name":null,"has_plus":false,"id":13055,"last_name":null,"updated_at":"2012-07-18T19:33:13Z","username":"vermonster","url":"https://api.cheddarapp.com/v1/users/13055","socket":{"auth_url":"https://api.cheddarapp.com/pusher/auth","api_key":"675f10a650f18b4eb0a8","app_id":"15197","channel":"private-user-13055"}}'
     http_version: 
-  recorded_at: Sat, 28 Jul 2012 23:02:59 GMT
+  recorded_at: Sun, 29 Jul 2012 23:01:39 GMT
 - request:
     method: get
     uri: https://api.cheddarapp.com/v1/me
@@ -80,15 +80,15 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 28 Jul 2012 23:03:00 GMT
+      - Sun, 29 Jul 2012 23:01:40 GMT
       Server:
       - thin 1.4.1 codename Chromeo
       X-Rack-Cache:
       - miss
       X-Request-Id:
-      - 45365883c6255ffebc8ec0f28a7e82f9
+      - be907d2ed061cbd59e4ec91397a21ca4
       X-Runtime:
-      - '0.003910'
+      - '0.007977'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Content-Length:
@@ -100,5 +100,5 @@ http_interactions:
       string: ! '{"error":"not_authorized","error_description":"This method requires
         authentication."}'
     http_version: 
-  recorded_at: Sat, 28 Jul 2012 23:03:00 GMT
+  recorded_at: Sun, 29 Jul 2012 23:01:39 GMT
 recorded_with: VCR 2.2.3

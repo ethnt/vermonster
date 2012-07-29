@@ -8,8 +8,7 @@ end
 task :default => :spec
 
 namespace :vcr do
-
-  desc "Delete all of the saves cassettes."
+  desc "Delete all of the saves cassettes"
   task :clear do
     exec("rm -rf spec/fixtures/cassettes/*")
   end

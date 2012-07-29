@@ -705,4 +705,122 @@ http_interactions:
       string: ''
     http_version: 
   recorded_at: Sat, 28 Jul 2012 23:03:01 GMT
+- request:
+    method: get
+    uri: https://api.cheddarapp.com/v1/tasks/209582
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 6e8c9e570805e75d683a963b1290116a
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - ! '*,X-Pusher-Socket-ID,Content-Type,Authorization'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, OPTIONS
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Request-Method:
+      - ! '*'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 29 Jul 2012 22:55:26 GMT
+      Etag:
+      - ! '"8dd90521b1d6c0028e31994eebe893f6"'
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - 261f13074a4be14c4d3d72b1ef9fb6a4
+      X-Runtime:
+      - '0.017074'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '320'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"archived_at":null,"completed_at":null,"created_at":"2012-07-28T22:39:22Z","display_html":"Foo
+        to the bar.","display_text":"Foo to the bar.","id":209582,"list_id":24200,"position":10,"text":"Foo
+        to the bar.","updated_at":"2012-07-28T22:39:22Z","entities":[],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/209582"}'
+    http_version: 
+  recorded_at: Sun, 29 Jul 2012 22:55:26 GMT
+- request:
+    method: put
+    uri: https://api.cheddarapp.com/v1/tasks/209582/move
+    body:
+      encoding: US-ASCII
+      string: ! '{"task": { "list_id": 24398 } }'
+    headers:
+      Authorization:
+      - Bearer 6e8c9e570805e75d683a963b1290116a
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Headers:
+      - ! '*,X-Pusher-Socket-ID,Content-Type,Authorization'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, OPTIONS
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Request-Method:
+      - ! '*'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 29 Jul 2012 22:55:27 GMT
+      Etag:
+      - ! '"858b3251326f3aa6bd3ed751cd34650b"'
+      Server:
+      - thin 1.4.1 codename Chromeo
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - 4db2a8a12eca1f3ae8e26658e757ca82
+      X-Runtime:
+      - '0.060187'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '319'
+      Connection:
+      - keep-alive
+    body:
+      encoding: US-ASCII
+      string: ! '{"archived_at":null,"completed_at":null,"created_at":"2012-07-28T22:39:22Z","display_html":"Foo
+        to the bar.","display_text":"Foo to the bar.","id":209582,"list_id":24398,"position":1,"text":"Foo
+        to the bar.","updated_at":"2012-07-29T22:55:27Z","entities":[],"tags":[],"url":"https://api.cheddarapp.com/v1/tasks/209582"}'
+    http_version: 
+  recorded_at: Sun, 29 Jul 2012 22:55:27 GMT
 recorded_with: VCR 2.2.3

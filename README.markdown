@@ -80,7 +80,7 @@ cheddar.tasks.archive(42)
 # Archive all items in list 42.
 cheddar.tasks.archive!(42)
 
-# Move to another list (not yet implemented).
+# Move to another list.
 awesome.move(32)
 ```
 
