@@ -51,7 +51,7 @@ foobar.update(:title => "Foosbar")
 # Create a new list called "Foobaz".
 foobaz = cheddar.lists.create(:title => "Foobaz")
 
-# Reorder your lists (not yet implemented).
+# Reorder your lists.
 cheddar.lists.reorder([42, 12, 35])
 ```
 
@@ -71,7 +71,7 @@ task.update(:text => "Foo to the bar.")
 # Create a task in list 42.
 awesome = cheddar.tasks.create(42, :text => "Be awesome!")
 
-# Reorder task in list 42 (not yet implemented).
+# Reorder task in list 42.
 cheddar.tasks.reorder(42, [54, 23, 42])
 
 # Archive completed items in list 42.
