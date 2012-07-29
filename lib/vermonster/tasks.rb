@@ -16,6 +16,9 @@ module Vermonster
         self.merge!(Vermonster::Client.connection.put("tasks/#{self["id"]}", "{\"task\": #{options.to_json}}").body)
       end
 
+      def move(list)
+      end
+
       class << self
         def from_list(id)
           tasks_raw = Vermonster::Client.connection.get("lists/#{id}/tasks").body
