@@ -9,10 +9,13 @@ module Vermonster
     end
 
     class User < Hash
-      include Hashie::Extensions::MethodAccess
-
       def initialize(options = {})
         self.merge!(options)
+
+        options.each do |(attr, val)|      
+          instance_variable_set("@#{attr}", val)
+          instance_eval "def #{attr}() @#{attr} end"
+        end
       end
 
       def self.me
