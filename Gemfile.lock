@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    vermonster (0.1.0)
+    vermonster (0.1.1)
       faraday (~> 0.8.0)
       faraday_middleware (~> 0.8.8)
       hashie (~> 1.2.0)
