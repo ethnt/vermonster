@@ -4,6 +4,12 @@ Vermonster is a way to consume the [Cheddar API](https://cheddarapp.com/develope
 
 **Want Python instead? Check out [vermonster-py](https://github.com/jpennell/vermonster-py).**
 
+## Installation
+
+```
+gem install vermonster
+```
+
 ## Usage
 
 ```ruby
