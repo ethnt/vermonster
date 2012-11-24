@@ -22,7 +22,8 @@ module Vermonster
 
         self.connect!(@client[:token])
 
-        authorized?
+        # send the token
+        @client[:token]
       else
         false
       end
