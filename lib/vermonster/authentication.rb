@@ -22,8 +22,12 @@ module Vermonster
 
         self.connect!(@client[:token])
 
-        # send the token
-        @client[:token]
+
+        if @client[:token]
+          @client[:token]
+        else
+          false
+        end
       else
         false
       end
