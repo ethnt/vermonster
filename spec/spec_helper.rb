@@ -1,8 +1,8 @@
-require_relative "../lib/vermonster"
-
 require "spork"
 
 Spork.prefork do
+	require_relative "../lib/vermonster"
+
 	require "rspec"
 	require "vcr"
 	require "webmock/rspec"
