@@ -15,7 +15,8 @@ module Vermonster
     def token!(code)
       Vermonster::Client.connection.basic_auth(@client[:id], @client[:secret])
 
-      response = Vermonster::Client.connection.post "/oauth/token", { :grant_type => "authorization_code", :code => code }
+      options = { :grant_type => "autorization_code", :code => code }
+      response = Vermonster::Client.connection.post "/oauth/token", options
 
       if response.body["access_token"]
         @client = @client.merge(:token => response.body["access_token"])

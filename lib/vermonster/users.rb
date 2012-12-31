@@ -8,11 +8,12 @@ module Vermonster
       self.class::User
     end
 
+    # A Cheddar User.
     class User < Hash
       def initialize(options = {})
         self.merge!(options)
 
-        options.each do |(attr, val)|      
+        options.each do |(attr, val)|
           instance_variable_set("@#{attr}", val)
           instance_eval "def #{attr}() @#{attr} end"
         end

@@ -20,7 +20,10 @@ describe Vermonster::Authentication do
     end
 
     it "should take other parameters" do
-      @cheddar.authorize_url(:redirect_uri => "http://google.com", :state => "foobar").should == "https://api.cheddarapp.com/oauth/authorize?client_id=#{@client[:id]}&redirect_uri=http://google.com&state=foobar"
+      params = { :redirect_uri => "http://google.com", :state => "foobar" }
+      expected = "https://api.cheddarapp.com/oauth/authorize?client_id=#{@client[:id]}&redirect_uri=http://google.com&state=foobar"
+
+      @cheddar.authorize_url(params).should == expected
     end
   end
 

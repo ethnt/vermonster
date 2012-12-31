@@ -8,10 +8,12 @@ require 'vermonster/tasks'
 require 'vermonster/users'
 
 module Vermonster
+
+  # A new Vermonster Client.
   class Client
     attr_accessor :client
 
-    def initialize(options={})
+    def initialize(options = {})
       @client = options
 
       self.connect!

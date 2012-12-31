@@ -4,11 +4,12 @@ module Vermonster
       self.class::List
     end
 
+    # A List of different Tasks.
     class List < Hash
       def initialize(options = {})
         self.merge!(options)
 
-        options.each do |(attr, val)|      
+        options.each do |(attr, val)|
           instance_variable_set("@#{attr}", val)
           instance_eval "def #{attr}() @#{attr} end"
         end
@@ -43,7 +44,6 @@ module Vermonster
         end
 
         def reorder(lists)
-          
         end
       end
     end

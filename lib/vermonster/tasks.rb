@@ -4,11 +4,12 @@ module Vermonster
       self.class::Task
     end
 
+    # A Task inside of a List.
     class Task < Hash
       def initialize(options = {})
         self.merge!(options)
 
-        options.each do |(attr, val)|      
+        options.each do |(attr, val)|
           instance_variable_set("@#{attr}", val)
           instance_eval "def #{attr}() @#{attr} end"
         end
