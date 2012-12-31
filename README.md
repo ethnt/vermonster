@@ -1,4 +1,4 @@
-# Vermonster [![Build Status](https://secure.travis-ci.org/eturk/vermonster.png)](https://travis-ci.org/eturk/vermonster)
+# Vermonster [![Build Status](https://travis-ci.org/eturk/vermonster.png?branch=master)](https://travis-ci.org/eturk/vermonster)
 
 Vermonster is a way to consume the [Cheddar API](https://cheddarapp.com/developer).
 
