@@ -57,6 +57,11 @@ describe Vermonster::Lists do
         @list["title"].should == "Foobar"
       end
     end
+
+    describe "#reoder" do
+      it "should reorder all of the User's Lists"
+      it "should return an array of Lists"
+    end
   end
 
   describe "::List" do

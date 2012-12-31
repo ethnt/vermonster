@@ -77,6 +77,11 @@ describe Vermonster::Tasks do
         @cheddar.lists.find(24393).tasks.should be_empty
       end
     end
+
+    describe "#reorder" do
+      it "should reorder Tasks"
+      it "should return an Array of Tasks"
+    end
   end
 
   describe "::Task" do
